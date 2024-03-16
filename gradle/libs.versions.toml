@@ -16,6 +16,7 @@ compose-tv-foundation = "1.0.0-alpha10"
 compose-tv-material = "1.0.0-alpha10"
 androidx-activity-compose = "1.8.2"
 material = "1.10.0"
+material3-window-size = "0.3.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -46,6 +47,7 @@ compose-lifecycle-viewModel = { group = "androidx.lifecycle", name = "lifecycle-
 compose-tv-foundation = { group = "androidx.tv", name = "tv-foundation", version.ref = "compose-tv-foundation" }
 compose-tv-material = { group = "androidx.tv", name = "tv-material", version.ref = "compose-tv-material" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+material-window-size = { module = "dev.chrisbanes.material3:material3-window-size-class-multiplatform", version.ref = "material3-window-size" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
