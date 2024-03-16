@@ -1,0 +1,65 @@
+[versions]
+agp = "8.4.0-alpha13"
+kotlin = "1.9.0"
+junit = "4.13.2"
+
+# android libraries
+androidx-core-ktx = "1.12.0"
+androidx-test-ext-junit = "1.1.5"
+androidx-test-espresso = "3.5.1"
+androidx-lifecycle-runtime-ktx = "2.7.0"
+androidx-appcompat = "1.6.1"
+
+# compose
+compose-bom = "2024.02.02"
+compose-tv-foundation = "1.0.0-alpha10"
+compose-tv-material = "1.0.0-alpha10"
+androidx-activity-compose = "1.8.2"
+material = "1.10.0"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+# androidx
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle-runtime-ktx" }
+
+# androidx-compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activity-compose" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidx-lifecycle-runtime-ktx" }
+compose-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle-runtime-ktx" }
+compose-lifecycle-viewModel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle-runtime-ktx" }
+compose-tv-foundation = { group = "androidx.tv", name = "tv-foundation", version.ref = "compose-tv-foundation" }
+compose-tv-material = { group = "androidx.tv", name = "tv-material", version.ref = "compose-tv-material" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
+[bundles]
+android = [
+    "androidx-appcompat", "androidx-core-ktx", "androidx-lifecycle-runtime-ktx"
+]
+compose = [
+    "compose-activity", "compose-foundation", "compose-foundation-layout",
+    "compose-material-icons-extended", "compose-ui", "compose-ui-graphics",
+    "compose-ui-tooling-preview", "compose-material3",
+    "compose-lifecycle-livedata-ktx", "compose-lifecycle-runtime", "compose-lifecycle-viewModel",
+    "compose-tv-foundation", "compose-tv-material"
+]

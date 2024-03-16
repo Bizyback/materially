@@ -1,0 +1,34 @@
+# Gradle
+.gradle
+/.gradle
+/conventions/.gradle
+
+# Idea
+.idea
+/.idea
+
+# Build
+/build
+/conventions/build
+/conventions/build/*
+
+# Properties
+local.properties
+/local.properties
+
+# Mac Specific Files
+.DS_Store
+
+# Apk
+*.apk
+
+# App Bundle
+*.aab
+
+# Other Folders
+/captures
+
+# Other Files
+*.iml
+.externalNativeBuild
+.cxx
