@@ -42,5 +42,5 @@ most of them. Materially merges mobile and tv `Material3` components into one.
 #### Sample
 |                                      mobile                                       |                                      tablet                                       |                                      telly                                      |
 |:---------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|
-| <img src="/.github/images/demo/mobile.png" width="200" hspace="2" alt="mobile" /> | <img src="/.github/images/demo/tablet.png" width="200" hspace="2" alt="tablet" /> | <img src="/.github/images/demo/telly.png" width="200" hspace="2" alt="telly" /> |
+| <img src="/.github/images/demo/mobile.png" width="10%" hspace="2" alt="mobile" /> | <img src="/.github/images/demo/tablet.png" width="30%" hspace="2" alt="tablet" /> | <img src="/.github/images/demo/telly.png" width="60%" hspace="2" alt="telly" /> |
 
