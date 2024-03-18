@@ -9,10 +9,10 @@ most of them. Materially merges mobile and tv `Material3` components into one.
 ### Example
 #### Current
 - dependencies
-
-|               Mobile                |           Television           |
-|:-----------------------------------:|:------------------------------:|
-| `androidx.compose.material3.Button` | `androidx.tv.material3.Button` |
+  
+  |               Mobile                |           Television           |
+  |:-----------------------------------:|:------------------------------:|
+  | `androidx.compose.material3.Button` | `androidx.tv.material3.Button` |
 
 - usage
     ```kotlin
@@ -28,10 +28,10 @@ most of them. Materially merges mobile and tv `Material3` components into one.
     ```
 #### Materially
 - dependency
-
-|                Mobile & Television                |
-|:-------------------------------------------------:|
-| `com.bizyback.materially.components.atoms.Button` |
+  
+  |                Mobile & Television                |
+  |:-------------------------------------------------:|
+  | `com.bizyback.materially.components.atoms.Button` |
 
 - usage
     ```kotlin
