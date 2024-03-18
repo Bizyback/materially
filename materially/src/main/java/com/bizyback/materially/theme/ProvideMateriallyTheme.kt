@@ -7,10 +7,11 @@ import com.bizyback.materially.colors.LocalColorScheme
 import com.bizyback.materially.colors.MateriallyColorScheme
 import com.bizyback.materially.colors.largeLightColorScheme
 import com.bizyback.materially.colors.smallLightColorScheme
-import com.bizyback.materially.screens.LocalScreen
-import com.bizyback.materially.screens.MateriallyScreens
-import com.bizyback.materially.screens.Screen
-import com.bizyback.materially.screens.getMateriallyScreenSize
+import com.bizyback.materially.device.LocalDevice
+import com.bizyback.materially.device.MateriallyDevice
+import com.bizyback.materially.device.getMateriallyScreenSize
+import com.bizyback.materially.padding.LocalPadding
+import com.bizyback.materially.padding.MateriallyPadding
 import com.bizyback.materially.shapes.LocalShapes
 import com.bizyback.materially.shapes.MateriallyShapes
 import com.bizyback.materially.shapes.toLargeShapes
@@ -26,23 +27,23 @@ import androidx.tv.material3.MaterialTheme as LargeMaterialTheme
 @Composable
 internal fun ProvideMateriallyTheme(
     shapes: MateriallyShapes,
-    screens: MateriallyScreens,
+    padding: MateriallyPadding,
     typography: MateriallyTypography,
     colorScheme: MateriallyColorScheme,
     content: @Composable () -> Unit,
 ) {
 
-    val screen = getMateriallyScreenSize(screens = screens)
+    val device = getMateriallyScreenSize()
 
     CompositionLocalProvider(
-        LocalScreen provides screen,
+        LocalDevice provides device,
         LocalShapes provides shapes,
         LocalTypography provides typography,
-        LocalColorScheme provides colorScheme
+        LocalColorScheme provides colorScheme,
+        LocalPadding provides padding
     ) {
-        when (screen) {
-            Screen.SM,
-            Screen.MD -> {
+        when (device) {
+            MateriallyDevice.MOBILE -> {
                 SmallMaterialTheme(
                     colorScheme = colorScheme.smallLightColorScheme(),
                     shapes = shapes.toSmallShapes(),
@@ -51,9 +52,7 @@ internal fun ProvideMateriallyTheme(
                 )
             }
 
-            Screen.LG,
-            Screen.XL,
-            Screen.XXL -> {
+            MateriallyDevice.TELEVISION -> {
                 LargeMaterialTheme(
                     colorScheme = colorScheme.largeLightColorScheme(),
                     shapes = shapes.toLargeShapes(),

@@ -1,16 +1,21 @@
 package com.bizyback.materially
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.bizyback.materially.components.atoms.Button
+import com.bizyback.materially.components.atoms.Text
+import com.bizyback.materially.components.molecules.Scaffold
 import com.bizyback.materially.ui.theme.DemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +25,32 @@ class MainActivity : ComponentActivity() {
         setContent {
             DemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Column(
+                        modifier = Modifier
+                            .padding(innerPadding)
+                            .fillMaxSize(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Greeting(
+                            name = "Materially",
+                            modifier = Modifier
+                        )
+
+                        Button(
+                            modifier = Modifier.padding(top = MateriallyTheme.padding.eight),
+                            onClick = {
+                                Toast.makeText(this@MainActivity, "Clicked", Toast.LENGTH_SHORT)
+                                    .show()
+                            },
+                            onLongClick = {
+                                Toast.makeText(this@MainActivity, "Long Clicked", Toast.LENGTH_LONG)
+                                    .show()
+                            }
+                        ) {
+                            Text(text = "click")
+                        }
+                    }
                 }
             }
         }
@@ -33,7 +60,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "$name!",
         modifier = modifier
     )
 }

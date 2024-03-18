@@ -23,6 +23,12 @@ android {
             )
         }
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -34,7 +40,17 @@ android {
 
 dependencies {
 
-    implementation(platform(libs.compose.bom))
+    api(platform(libs.compose.bom))
     implementation(libs.bundles.compose)
+    api(libs.compose.foundation)
+    api(libs.compose.foundation.layout)
+    api(libs.compose.ui.tooling.preview)
+    api(libs.compose.material3)
+
+    api(libs.compose.activity)
+    api(libs.androidx.core.ktx)
+    api(libs.androidx.lifecycle.runtime.ktx)
+
+    implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
 
 }
