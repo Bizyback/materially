@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -51,6 +52,17 @@ dependencies {
     api(libs.androidx.core.ktx)
     api(libs.androidx.lifecycle.runtime.ktx)
 
-    implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
+}
 
+afterEvaluate {
+    publishing {
+        publications {
+            register("release", MavenPublication::class) {
+                from(components["release"])
+                groupId = "com.bizyback"
+                artifactId = "materially"
+                version = "0.0.1"
+            }
+        }
+    }
 }
