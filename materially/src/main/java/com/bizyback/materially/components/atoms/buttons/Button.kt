@@ -1,4 +1,4 @@
-package com.bizyback.materially.components.atoms
+package com.bizyback.materially.components.atoms.buttons
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
@@ -11,13 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.ExperimentalTvMaterial3Api
-import com.bizyback.materially.components.atoms.buttons.ButtonBorder
-import com.bizyback.materially.components.atoms.buttons.ButtonColors
-import com.bizyback.materially.components.atoms.buttons.ButtonDefaults
-import com.bizyback.materially.components.atoms.buttons.ButtonElevation
-import com.bizyback.materially.components.atoms.buttons.ButtonGlow
-import com.bizyback.materially.components.atoms.buttons.ButtonScale
-import com.bizyback.materially.components.atoms.buttons.ButtonShape
 import com.bizyback.materially.device.LocalDevice
 import com.bizyback.materially.device.MateriallyDevice
 import androidx.compose.material3.Button as SmallButton

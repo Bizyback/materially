@@ -1,4 +1,4 @@
-package com.bizyback.materially.components.atoms
+package com.bizyback.materially.components.atoms.buttons
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.RowScope

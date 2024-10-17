@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.bizyback.materially.components.atoms.Button
+import com.bizyback.materially.components.atoms.buttons.Button
 import com.bizyback.materially.components.atoms.Text
 import com.bizyback.materially.components.molecules.Scaffold
 import com.bizyback.materially.ui.theme.DemoTheme
